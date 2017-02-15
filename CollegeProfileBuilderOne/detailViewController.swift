@@ -32,7 +32,11 @@ class detailViewController: UIViewController {
   
     @IBAction func saveButtonTapped(_ sender: Any)
     {
-    
+    collegeDetail.image = myImageView.image
+        collegeDetail.name = collegeTextField.text!
+        collegeDetail.location = locationTextField.text!
+        collegeDetail.mascot = mascotTextField.text!
+        
     }
     override func viewDidAppear(_ animated: Bool)
     {

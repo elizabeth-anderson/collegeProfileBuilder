@@ -20,28 +20,29 @@ class detailViewController: UIViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        myImageView.image = collegeDetail.image
-        collegeTextField.text = collegeDetail.name
-        locationTextField.text = collegeDetail.location
-        mascotTextField.text = collegeDetail.mascot
         
-
-     
+        myImageView.image = collegeDetail.image
+        
+        collegeTextField.text = collegeDetail.name
+        
+        locationTextField.text = collegeDetail.location
+        
+        mascotTextField.text = collegeDetail.mascot
     }
 
   
     @IBAction func saveButtonTapped(_ sender: Any)
     {
-    collegeDetail.image = myImageView.image
+        collegeDetail.image = myImageView.image
+        
         collegeDetail.name = collegeTextField.text!
+        
         collegeDetail.location = locationTextField.text!
+        
         collegeDetail.mascot = mascotTextField.text!
         
+mascotTextField.resignFirstResponder()
     }
-    override func viewDidAppear(_ animated: Bool)
-    {
-    
-        
-    }
+
 
 }

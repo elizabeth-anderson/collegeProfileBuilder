@@ -14,22 +14,14 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     var myCollegeObject:[collegeClass] = []
     
-    
-    
-    override func viewDidAppear(_ animated: Bool)
-        {
-        myTableView.reloadData()
-        }
-    
-    
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        myCollegeObject.append(collegeClass(Name: "University of Indiana", Location: "Bloomington", Mascot: "Hoosier", Image: UIImage(named: "indiana")!))
+        myCollegeObject.append(collegeClass(Name: "University of Indiana", Location: "Bloomington", Mascot: "Hoosier", Image: UIImage(named: "indiana")!, Link:"https://www.indiana.edu/"))
         
-          myCollegeObject.append(collegeClass(Name: "Michigan State", Location: "Lansing", Mascot: "Spartan", Image: UIImage(named: "michigan")!))
+        myCollegeObject.append(collegeClass(Name: "Michigan State", Location: "Lansing", Mascot: "Spartan", Image: UIImage(named: "michigan")!, Link:"https://www.indiana.edu/"))
         
-          myCollegeObject.append(collegeClass(Name: "University of Michigan", Location: "Ann-Arbor", Mascot: "Wolverine", Image: UIImage(named: "michiganu")!))
+        myCollegeObject.append(collegeClass(Name: "University of Michigan", Location: "Ann-Arbor", Mascot: "Wolverine", Image: UIImage(named: "michiganu")!, Link:"https://www.indiana.edu/"))
     }
     
     
@@ -73,13 +65,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
     }
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
         {
             return myCollegeObject.count
         }
-   
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
         {
@@ -92,8 +81,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             return cell
         }
     
-    
-    
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
     {
         if (editingStyle == .delete)
@@ -104,8 +91,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         }
     }
   
-    
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
         {
             let detailView = segue.destination as! detailViewController
@@ -115,7 +100,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             detailView.collegeDetail = myCollegeObject[selectedRow!]
         }
 
-
+    override func viewDidAppear(_ animated: Bool)
+        {
+            myTableView.reloadData()
+        }
+    
     
     
 }

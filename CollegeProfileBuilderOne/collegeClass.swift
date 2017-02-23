@@ -14,13 +14,15 @@ class collegeClass: NSObject
     var location  = ""
     var  mascot = ""
     var image  = UIImage(named: "defualt")
+    var link = ""
     
-    init(Name:String, Location:String, Mascot:String, Image:UIImage)
+    init(Name:String, Location:String, Mascot:String, Image:UIImage, Link:String)
     {
         name = Name
         location = Location
         mascot = Mascot
         image = Image
+        link = Link
     }
     
     init(Name:String, Location:String)

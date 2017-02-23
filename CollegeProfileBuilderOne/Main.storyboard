@@ -75,15 +75,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gDO-SV-aoB">
-                                <rect key="frame" x="54" y="437" width="32" height="30"/>
+                                <rect key="frame" x="288" y="360" width="34" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="save">
+                                <state key="normal" title="Save">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="Uwc-vV-0zr" eventType="touchUpInside" id="QD2-bE-zi6"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mascot" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UBZ-db-5DB">
+                                <rect key="frame" x="34" y="399" width="216" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.71683669090270996" green="0.86368292570114136" blue="0.93642467260360718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="location" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="98V-N3-FYJ">
                                 <rect key="frame" x="34" y="361" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -105,19 +113,46 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="mascot" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UBZ-db-5DB">
-                                <rect key="frame" x="34" y="399" width="216" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwK-WD-OzM">
+                                <rect key="frame" x="34" y="437" width="216" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.71683669090270996" green="0.86368292570114136" blue="0.93642467260360718" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpi-IM-0ET">
+                                <rect key="frame" x="255" y="399" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go To Site">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="safariButton:" destination="Uwc-vV-0zr" eventType="touchUpInside" id="BzP-K6-1UQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IBb-r6-uo7">
+                                <rect key="frame" x="52" y="491" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="camera"/>
+                                <connections>
+                                    <action selector="cameraButton:" destination="Uwc-vV-0zr" eventType="touchUpInside" id="seA-vP-gFp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTh-QH-Nhx">
+                                <rect key="frame" x="163" y="491" width="87" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="photo library"/>
+                                <connections>
+                                    <action selector="photoLibraryButton:" destination="Uwc-vV-0zr" eventType="touchUpInside" id="qzK-gA-7Af"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.88843074850000003" magenta="0.75952890110000004" yellow="0.21387892650000001" black="0.18377070600000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     </view>
                     <connections>
                         <outlet property="collegeTextField" destination="qQy-xA-cLL" id="CWi-RK-lwv"/>
+                        <outlet property="linkTextField" destination="RwK-WD-OzM" id="nfG-cu-Zks"/>
                         <outlet property="locationTextField" destination="98V-N3-FYJ" id="42U-3Y-TSh"/>
                         <outlet property="mascotTextField" destination="UBZ-db-5DB" id="c5G-fZ-svt"/>
                         <outlet property="myImageView" destination="I4M-FE-Kep" id="uhg-yE-nXr"/>
@@ -125,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Urw-aw-VCl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1501.5999999999999" y="132.68365817091455"/>
+            <point key="canvasLocation" x="1594" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="R08-ub-Wzm">

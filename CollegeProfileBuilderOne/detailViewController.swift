@@ -7,15 +7,16 @@
 //
 
 import UIKit
+import MapKit
 
-class detailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate
+class detailViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UISearchBarDelegate
 {
     @IBOutlet weak var myImageView: UIImageView!
     @IBOutlet weak var collegeTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var mascotTextField: UITextField!
     @IBOutlet weak var linkTextField: UITextField!
-    
+  
     var collegeDetail:collegeClass!
     
     let imagePicker = UIImagePickerController()
@@ -92,8 +93,5 @@ class detailViewController: UIViewController, UIImagePickerControllerDelegate, U
     {
                 getPhotoLibrary()
     }
-  
-    
-
 
 }

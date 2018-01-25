@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PSp-1E-fBg">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13770" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="PSp-1E-fBg">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13770"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,7 +30,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2NZ-Q7-7yc" id="XOO-NB-QGP">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
@@ -111,7 +111,7 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4M-FE-Kep">
                                 <rect key="frame" x="34" y="84" width="287" height="226"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" cyan="0.88843074850000003" magenta="0.75952890110000004" yellow="0.21387892650000001" black="0.18377070600000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RwK-WD-OzM">
                                 <rect key="frame" x="34" y="437" width="216" height="30"/>
@@ -147,6 +147,14 @@
                                     <action selector="photoLibraryButton:" destination="Uwc-vV-0zr" eventType="touchUpInside" id="qzK-gA-7Af"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XS5-Qb-L5K">
+                                <rect key="frame" x="96" y="530" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="go to map"/>
+                                <connections>
+                                    <segue destination="dq8-tM-2dh" kind="show" id="YYC-NL-CrC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cyan="0.88843074850000003" magenta="0.75952890110000004" yellow="0.21387892650000001" black="0.18377070600000001" alpha="1" colorSpace="custom" customColorSpace="genericCMYKColorSpace"/>
                     </view>
@@ -162,13 +170,56 @@
             </objects>
             <point key="canvasLocation" x="1594" y="134"/>
         </scene>
+        <!--Map Search-->
+        <scene sceneID="PwM-pD-pKt">
+            <objects>
+                <viewController id="dq8-tM-2dh" customClass="mapViewController" customModule="CollegeProfileBuilderOne" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jbr-eS-uDg"/>
+                        <viewControllerLayoutGuide type="bottom" id="VpJ-7b-Ofh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lfr-MK-45a">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="662-iv-DaF">
+                                <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </navigationBar>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="jYo-sr-r6Z">
+                                <rect key="frame" x="0.0" y="64" width="375" height="623"/>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jYo-sr-r6Z" firstAttribute="leading" secondItem="lfr-MK-45a" secondAttribute="leading" constant="-20" id="A5I-Qv-HSu"/>
+                            <constraint firstItem="VpJ-7b-Ofh" firstAttribute="top" secondItem="jYo-sr-r6Z" secondAttribute="bottom" id="Ov9-SH-Lig"/>
+                            <constraint firstItem="jYo-sr-r6Z" firstAttribute="top" secondItem="lfr-MK-45a" secondAttribute="top" id="bTo-06-hPU"/>
+                            <constraint firstAttribute="trailing" secondItem="jYo-sr-r6Z" secondAttribute="trailing" constant="-20" id="hIR-W2-eiG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Map Search" id="gOm-Ck-YsZ">
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="svj-cE-haa">
+                            <connections>
+                                <action selector="showSearchBar:" destination="dq8-tM-2dh" id="Cob-DH-ced"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="myMapView" destination="jYo-sr-r6Z" id="pvX-fx-MwD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N3T-DM-lIw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2372" y="130.88455772113943"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="R08-ub-Wzm">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PSp-1E-fBg" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FoA-al-8AT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

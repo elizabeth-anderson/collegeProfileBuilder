@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F1EB4701E6F14A100C9A8C0 /* mapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F1EB46F1E6F14A100C9A8C0 /* mapViewController.swift */; };
 		3F8930661E4B794300C45790 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8930651E4B794300C45790 /* AppDelegate.swift */; };
 		3F8930681E4B794300C45790 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F8930671E4B794300C45790 /* ViewController.swift */; };
 		3F89306D1E4B794300C45790 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F89306C1E4B794300C45790 /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F1EB46F1E6F14A100C9A8C0 /* mapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mapViewController.swift; sourceTree = "<group>"; };
 		3F8930621E4B794200C45790 /* CollegeProfileBuilderOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollegeProfileBuilderOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8930651E4B794300C45790 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3F8930671E4B794300C45790 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				3F8930671E4B794300C45790 /* ViewController.swift */,
 				3F8930951E4CD3D300C45790 /* detailViewController.swift */,
 				3FA4DD5B1E4E21F4008BEC72 /* Main.storyboard */,
+				3F1EB46F1E6F14A100C9A8C0 /* mapViewController.swift */,
 				3F89306C1E4B794300C45790 /* Assets.xcassets */,
 				3F89306E1E4B794300C45790 /* LaunchScreen.storyboard */,
 				3F8930711E4B794300C45790 /* Info.plist */,
@@ -266,6 +269,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F8930681E4B794300C45790 /* ViewController.swift in Sources */,
+				3F1EB4701E6F14A100C9A8C0 /* mapViewController.swift in Sources */,
 				3F8930941E4B79B800C45790 /* collegeClass.swift in Sources */,
 				3F8930661E4B794300C45790 /* AppDelegate.swift in Sources */,
 				3F8930961E4CD3D300C45790 /* detailViewController.swift in Sources */,

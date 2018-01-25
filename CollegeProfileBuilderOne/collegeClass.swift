@@ -29,7 +29,7 @@ class collegeClass: NSObject
     {
         name = Name
         location = Location
-        
+       
     }
 }
 

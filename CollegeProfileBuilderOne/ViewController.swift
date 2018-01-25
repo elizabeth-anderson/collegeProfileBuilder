@@ -19,12 +19,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.viewDidLoad()
         myCollegeObject.append(collegeClass(Name: "University of Indiana", Location: "Bloomington", Mascot: "Hoosier", Image: UIImage(named: "indiana")!, Link:"https://www.indiana.edu/"))
         
-        myCollegeObject.append(collegeClass(Name: "Michigan State", Location: "Lansing", Mascot: "Spartan", Image: UIImage(named: "michigan")!, Link:"https://www.indiana.edu/"))
+        myCollegeObject.append(collegeClass(Name: "Michigan State", Location: "Lansing", Mascot: "Spartan", Image: UIImage(named: "michigan")!, Link:"https://www.msu.edu/"))
         
-        myCollegeObject.append(collegeClass(Name: "University of Michigan", Location: "Ann-Arbor", Mascot: "Wolverine", Image: UIImage(named: "michiganu")!, Link:"https://www.indiana.edu/"))
+        myCollegeObject.append(collegeClass(Name: "University of Michigan", Location: "Ann-Arbor", Mascot: "Wolverine", Image: UIImage(named: "michiganu")!, Link:"https://www.umich.edu/"))
     }
-    
-    
     
   @IBAction func addButtonTapped(_ sender: Any)
     {
@@ -61,8 +59,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         alert.addAction(addAction)
         
         present(alert, animated: true, completion: nil)
-        
-        
+
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
@@ -104,8 +101,6 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         {
             myTableView.reloadData()
         }
-    
-    
     
 }
 
